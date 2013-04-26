@@ -103,7 +103,7 @@ namespace youbot_driver{
 	this->addPort("events", events).doc("Event outport");
 
 	this->addPort("control_mode_ros", port_control_mode_ros).doc("Currently active control_mode for ROS");
-	this->addPort("events_ros", events).doc("Event outport ROS");
+	this->addPort("events_ros", events_ros).doc("Event outport ROS");
 
 	this->addOperation("start", &YoubotBaseService::start, this);
 	this->addOperation("update", &YoubotBaseService::update, this);
