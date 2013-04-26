@@ -65,8 +65,7 @@ base=yb:provides("Base")
 -- port_clone_conn creates an inverse and connected port to the given one. Used for this script to calibrate camera and test robot
 base_cmd_vel = rttlib.port_clone_conn(base:getPort("cmd_twist"))
 base_cmd_curr = rttlib.port_clone_conn(base:getPort("cmd_current"))
-depl:stream("youbot.Base.cmd_twist", rtt.provides("ros"):topic("cmd_vel"))
--- depl:stream("youbot.Base.cmd_current", rtt.provides("ros"):topic("cmd_current")) not possible as cmd_current is not a ROS Message
+
 
 -- connect to arm desired velocity
 arm_cmd_vel = rttlib.port_clone_conn(arm:getPort("joint_velocity_command"))
@@ -75,7 +74,7 @@ arm_vel.velocities:resize(5)
 for axis = 0, arm_vel.velocities.size-1 do
    arm_vel.velocities[axis]=0.0
 end
-depl:stream("youbot.Arm1.joint_velocity_command", rtt.provides("ros"):topic("joint_velocity_command"))
+
 -- connect to arm desired torque
 arm_cmd_torque = rttlib.port_clone_conn(arm:getPort("joint_effort_command"))
 arm_torque = rtt.Variable("/motion_control_msgs/JointEfforts")
@@ -83,7 +82,7 @@ arm_torque.efforts:resize(5)
 for axis = 0, arm_torque.efforts.size-1 do
    arm_torque.efforts[axis]=0.0
 end
-depl:stream("youbot.Arm1.joint_effort_command", rtt.provides("ros"):topic("joint_effort_command"))
+
 
 --- Some helper functions
 function aset_cmode_vel() arm:setControlMode(2) end
@@ -101,6 +100,8 @@ if not yb:start() then errmsg("Failed to start youbot") end
 depl:stream("youbot.Arm1.motor_states", rtt.provides("ros"):topic("arm_motor_states"))
 depl:stream("youbot.Arm1.jointstate", rtt.provides("ros"):topic("joint_states"))
 depl:stream("youbot.Arm1.joint_position_command", rtt.provides("ros"):topic("joint_position_command"))
+depl:stream("youbot.Arm1.joint_velocity_command", rtt.provides("ros"):topic("joint_velocity_command"))
+depl:stream("youbot.Arm1.joint_effort_command", rtt.provides("ros"):topic("joint_effort_command"))
 depl:stream("youbot.Arm1.gripper_cmd_ros", rtt.provides("ros"):topic("gripper_cmd"))
 depl:stream("youbot.Arm1.control_mode_ros", rtt.provides("ros"):topic("arm_control_mode"))
 depl:stream("youbot.Arm1.events_ros", rtt.provides("ros"):topic("arm_events"))
@@ -108,6 +109,7 @@ depl:stream("youbot.Base.motor_states", rtt.provides("ros"):topic("base_motor_st
 depl:stream("youbot.Base.odometry", rtt.provides("ros"):topic("odom"))
 depl:stream("youbot.Base.control_mode_ros", rtt.provides("ros"):topic("base_control_mode"))
 depl:stream("youbot.Base.events_ros", rtt.provides("ros"):topic("base_events"))
+depl:stream("youbot.Base.cmd_twist", rtt.provides("ros"):topic("cmd_vel"))
 depl:stream("youbot.Base.cmd_current_ros", rtt.provides("ros"):topic("base_cmd_current"))
 depl:stream("youbot.driver_state", rtt.provides("ros"):topic("driver_state"))
 
