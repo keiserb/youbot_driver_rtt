@@ -89,6 +89,7 @@ namespace youbot_driver{
 	    .doc("Commanded twist, expressed in the middle of the base");
 
 	this->addPort("cmd_current", port_cmd_current).doc("Commanded current for each wheel [mA]");
+	this->addPort("cmd_current_ros", port_cmd_current_ros).doc("Commanded current for each wheel ROS [mA]");
 
 	this->addPort("odometry",port_odom)
 	    .doc("Odometry, from wheel positions, expr. in middle of the base WRT to starting point");
@@ -100,6 +101,9 @@ namespace youbot_driver{
 	this->addPort("motor_states", port_motor_states).doc("Current state of motors");
 	this->addPort("control_mode", port_control_mode).doc("Currently active control_mode");
 	this->addPort("events", events).doc("Event outport");
+
+	this->addPort("control_mode_ros", port_control_mode_ros).doc("Currently active control_mode for ROS");
+	this->addPort("events_ros", events).doc("Event outport ROS");
 
 	this->addOperation("start", &YoubotBaseService::start, this);
 	this->addOperation("update", &YoubotBaseService::update, this);
@@ -138,6 +142,7 @@ namespace youbot_driver{
 	m_odom.twist.twist.angular.z = 0;
 	m_odom_yaw = 0;
 	m_odom_started = 0;
+	ros_array.data.resize(YOUBOT_NR_OF_WHEELS);
 
 	m_control_mode = MotorStop; //Initialize;
     }
@@ -240,35 +245,49 @@ namespace youbot_driver{
 	    if (m_in_motor[i]->error_flags & OVERCURRENT) {
 		m_motor_states.motor[i].counters.overcurrent++;
 		events.write(make_event(m_events, "e_OVERCURRENT,wheelid:", i));
+		ros_string.data=m_events;			//write output to ROS Topic as well
+		events_ros.write(ros_string);
 		fatal=true;
 	    }
 	    if (m_in_motor[i]->error_flags & UNDERVOLTAGE) {
 		m_motor_states.motor[i].counters.undervoltage++;
 		events.write(make_event(m_events, "e_UNDERVOLTAGE,wheelid:", i));
+		ros_string.data=m_events;			//write output to ROS Topic as well
+		events_ros.write(ros_string);
 		m_control_mode=MotorStop;
 		fatal=true;
 	    }
 	    if (m_in_motor[i]->error_flags & OVERTEMP) {
 		m_motor_states.motor[i].counters.overtemp++;
 		events.write(make_event(m_events, "e_OVERTEMP,wheelid:",i));
+		ros_string.data=m_events;			//write output to ROS Topic as well
+		events_ros.write(ros_string);
 		m_control_mode=MotorStop;
 		fatal=true;
 	    }
 	    if (m_in_motor[i]->error_flags & HALL_ERR) {
 		m_motor_states.motor[i].counters.hall_err++;
 		events.write(make_event(m_events, "e_HALL_ERR,wheelid:", i));
+		ros_string.data=m_events;			//write output to ROS Topic as well
+		events_ros.write(ros_string);
 	    }
 	    if (m_in_motor[i]->error_flags & ENCODER_ERR) {
 		m_motor_states.motor[i].counters.encoder_err++;
 		events.write(make_event(m_events, "e_ENCODER_ERR,wheelid:", i));
+		ros_string.data=m_events;			//write output to ROS Topic as well
+		events_ros.write(ros_string);
 	    }
 	    if (m_in_motor[i]->error_flags & SINE_COMM_INIT_ERR) {
 		m_motor_states.motor[i].counters.sine_comm_init_err++;
 		events.write(make_event(m_events, "e_SINE_COMM_INIT_ERR,wheelid:", i));
+		ros_string.data=m_events;			//write output to ROS Topic as well
+		events_ros.write(ros_string);
 	    }
 	    if (m_in_motor[i]->error_flags & EMERGENCY_STOP) {
 		m_motor_states.motor[i].counters.emergency_stop++;
 		events.write(make_event(m_events, "e_EMERGENCY_STOP,wheelid:", i));
+		ros_string.data=m_events;			//write output to ROS Topic as well
+		events_ros.write(ros_string);
 	    }
 	    if (m_in_motor[i]->error_flags & MODULE_INIT) {
 		if (! (module_init_status & (1 << i))) {
@@ -279,6 +298,8 @@ namespace youbot_driver{
 	    if (m_in_motor[i]->error_flags & EC_TIMEOUT) {
 		m_motor_states.motor[i].counters.ec_timeout++;
 		events.write(make_event(m_events, "e_EC_TIMEOUT,wheelid:", i));
+		ros_string.data=m_events;			//write output to ROS Topic as well
+		events_ros.write(ros_string);
 		OperationCaller<bool(bool,uint8,uint8,uint8,int32&)>
 		    sendMBX(this->getParent()->getOperation("sendMBX"),
 			    this->getOwner()->engine());
@@ -298,6 +319,8 @@ namespace youbot_driver{
 
 		m_motor_states.motor[i].counters.i2t_exceeded++;
 		events.write(make_event(m_events, "e_I2T_EXCEEDED,wheelid:", i));
+		ros_string.data=m_events;			//write output to ROS Topic as well
+		events_ros.write(ros_string);
 		m_control_mode=MotorStop;
 		log(Warning) << "base: i2t execeeded on wheel " << i << endlog();
 		fatal=true;
@@ -310,6 +333,8 @@ namespace youbot_driver{
 	    } else if (!(m_in_motor[i]->error_flags & I2T_EXCEEDED) && m_i2t_ex[i]) {
 		// i2c exceeded falling edge
 		events.write(make_event(m_events, "e_I2T_EXCEEDED_EXIT,wheelid:", i));
+		ros_string.data=m_events;			//write output to ROS Topic as well
+		events_ros.write(ros_string);
 		m_i2t_ex[i]=false;
 		log(Warning) << "base: i2t exceeded reset on wheel " << i << endlog();
 	    }
@@ -397,6 +422,8 @@ namespace youbot_driver{
 
 	if(diff_nsec >= m_timeout_nsec) {
 	    events.write("e_base_cmd_watchdog");
+	    ros_string.data=m_events;			//write output to ROS Topic as well
+		events_ros.write(ros_string);
 	    log(Error) << "base: watchdog emergency stop. No base twist or current in "
 		       << base_timeout << "s" << endlog();
 	    m_control_mode = MotorStop;
@@ -441,6 +468,7 @@ namespace youbot_driver{
 	geometry_msgs::Twist twist;
 	bool fatal_err;
 	FlowStatus fs;
+	FlowStatus fsros;
 
 	// Process received data
 	// mk, todo: why one earth are we repeating this each time???
@@ -460,6 +488,8 @@ namespace youbot_driver{
 
 	// tbd: only write when changed
 	port_control_mode.write(control_mode2str(m_control_mode));
+	ros_string.data=control_mode2str(m_control_mode);			//send data via ROS
+	port_control_mode_ros.write(ros_string);
 
 	for (size_t i = 0; i < YOUBOT_NR_OF_WHEELS; i++)
 	    ((out_motor_t*) (m_wheels[i].outputs))->controller_mode = m_control_mode;
@@ -485,7 +515,12 @@ namespace youbot_driver{
 	    break;
 	case Current:
 	    fs = port_cmd_current.read(m_wheel_current);
-
+	    fsros = port_cmd_current_ros.read(ros_array);
+	    if(fsros != NoData && fsros == NewData)	{			//Check ROS Message gets data. ROS Message is priorized over Orocos
+	    	//m_wheel_current.assign(ros_array.data, ros_array.data+sizeof(ros_array.data));
+	    	for(int j=0; j<4; j++)
+	    		m_wheel_current[j]=ros_array.data[j];
+	    }
 	    if( fs != NoData ) {
 		// validate input
 		if (m_wheel_current.size() != YOUBOT_NR_OF_WHEELS) {

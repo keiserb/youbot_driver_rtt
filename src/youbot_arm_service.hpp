@@ -43,6 +43,7 @@
 
 #include <sensor_msgs/typekit/Types.h>
 #include <motion_control_msgs/typekit/Types.h>
+#include <std_msgs/typekit/Types.h>
 
 #include "youbot_types.hpp"
 
@@ -64,11 +65,15 @@ namespace youbot_driver{
 	RTT::OutputPort<sensor_msgs::JointState> port_joint_state;
 	RTT::OutputPort<std::string> port_control_mode;
 	RTT::OutputPort<std::string> port_events;
+	RTT::OutputPort<std_msgs::String> port_control_mode_ros;		//add ROS functionality to String msgs
+	RTT::OutputPort<std_msgs::String> port_events_ros;				//add ROS functionality to String msgs
+
 	RTT::InputPort<motion_control_msgs::JointVelocities> port_cmd_vel;
 	RTT::InputPort<motion_control_msgs::JointPositions> port_cmd_pos;
 	RTT::InputPort<motion_control_msgs::JointEfforts> port_cmd_eff;
 
 	RTT::InputPort<int> gripper_cmd;
+	RTT::InputPort<std_msgs::Int32> gripper_cmd_ros;
 
 	bool __setControlMode(ControlMode mode);
 	bool setControlMode(ControlMode mode);
@@ -109,6 +114,8 @@ namespace youbot_driver{
 	bool m_configured;
 	ControlMode m_control_mode;
 	ControlMode m_control_modes[YOUBOT_NR_OF_JOINTS];
+	std_msgs::Int32 gripper_ros;
+	std_msgs::String ros_string;
     };
 }//namespace
 #endif // __YOUBOT_ARM_SERVICE_HPP__
