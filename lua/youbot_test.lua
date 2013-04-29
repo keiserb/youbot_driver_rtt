@@ -99,9 +99,9 @@ if not yb:start() then errmsg("Failed to start youbot") end
 --publish other output ports on ROS Nodes
 depl:stream("youbot.Arm1.motor_states", rtt.provides("ros"):topic("arm_motor_states"))
 depl:stream("youbot.Arm1.jointstate", rtt.provides("ros"):topic("joint_states"))
-depl:stream("youbot.Arm1.joint_position_command", rtt.provides("ros"):topic("joint_position_command"))
-depl:stream("youbot.Arm1.joint_velocity_command", rtt.provides("ros"):topic("joint_velocity_command"))
-depl:stream("youbot.Arm1.joint_effort_command", rtt.provides("ros"):topic("joint_effort_command"))
+depl:stream("youbot.Arm1.joint_position_command", rtt.provides("ros"):topic("/arm_1/arm_controller/position_command"))
+depl:stream("youbot.Arm1.joint_velocity_command", rtt.provides("ros"):topic("/arm_1/arm_controller/velocity_command"))
+depl:stream("youbot.Arm1.joint_effort_command", rtt.provides("ros"):topic("/arm_1/arm_controller/torques_command"))
 depl:stream("youbot.Arm1.gripper_cmd_ros", rtt.provides("ros"):topic("gripper_cmd"))
 depl:stream("youbot.Arm1.control_mode_ros", rtt.provides("ros"):topic("arm_control_mode"))
 depl:stream("youbot.Arm1.events_ros", rtt.provides("ros"):topic("arm_events"))
