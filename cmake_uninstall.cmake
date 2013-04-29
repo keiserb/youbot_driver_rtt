@@ -1,8 +1,8 @@
-IF(NOT EXISTS "/home/youbot/orocos/youbot_hardware/youbot_driver_rtt/install_manifest.txt")
-  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/home/youbot/orocos/youbot_hardware/youbot_driver_rtt/install_manifest.txt\"")
-ENDIF(NOT EXISTS "/home/youbot/orocos/youbot_hardware/youbot_driver_rtt/install_manifest.txt")
+IF(NOT EXISTS "/home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt/install_manifest.txt")
+  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt/install_manifest.txt\"")
+ENDIF(NOT EXISTS "/home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt/install_manifest.txt")
 
-FILE(READ "/home/youbot/orocos/youbot_hardware/youbot_driver_rtt/install_manifest.txt" files)
+FILE(READ "/home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 FOREACH(file ${files})
   MESSAGE(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

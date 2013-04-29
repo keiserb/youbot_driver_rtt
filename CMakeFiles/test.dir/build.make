@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/youbot/orocos/youbot_hardware/youbot_driver_rtt
+CMAKE_SOURCE_DIR = /home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/youbot/orocos/youbot_hardware/youbot_driver_rtt
+CMAKE_BINARY_DIR = /home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt
 
 # Utility rule file for test.
 
@@ -57,6 +57,6 @@ CMakeFiles/test.dir/clean:
 .PHONY : CMakeFiles/test.dir/clean
 
 CMakeFiles/test.dir/depend:
-	cd /home/youbot/orocos/youbot_hardware/youbot_driver_rtt && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/youbot/orocos/youbot_hardware/youbot_driver_rtt /home/youbot/orocos/youbot_hardware/youbot_driver_rtt /home/youbot/orocos/youbot_hardware/youbot_driver_rtt /home/youbot/orocos/youbot_hardware/youbot_driver_rtt /home/youbot/orocos/youbot_hardware/youbot_driver_rtt/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt /home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt /home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt /home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt /home/keiserb/rosstacks/youbot_hardware/youbot_driver_rtt/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test.dir/depend
 
