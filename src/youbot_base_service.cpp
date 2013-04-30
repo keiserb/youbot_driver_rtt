@@ -518,7 +518,7 @@ namespace youbot_driver{
 	    fsros = port_cmd_current_ros.read(ros_array);
 	    if(fsros != NoData && fsros == NewData)	{			//Check ROS Message gets data. ROS Message is priorized over Orocos
 	    	//m_wheel_current.assign(ros_array.data, ros_array.data+sizeof(ros_array.data));
-	    	for(int j=0; j < YOUBOT_NR_OF_WHEELS; j++)
+	    	for(int j=0; j<YOUBOT_NR_OF_WHEELS; j++)
 	    		m_wheel_current[j]=ros_array.data[j];
 	    }
 	    if( fs != NoData ) {
