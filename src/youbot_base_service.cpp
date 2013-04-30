@@ -465,6 +465,8 @@ namespace youbot_driver{
     }
 
     void YoubotBaseService::update() {
+	if(port_control_mode_ros.read(ros_string)==NewData)			//receive data via ROS
+		m_control_mode = str2control_mode(ros_string.data);
 	geometry_msgs::Twist twist;
 	bool fatal_err;
 	FlowStatus fs;
@@ -488,8 +490,6 @@ namespace youbot_driver{
 
 	// tbd: only write when changed
 	port_control_mode.write(control_mode2str(m_control_mode));
-	ros_string.data=control_mode2str(m_control_mode);			//send data via ROS
-	port_control_mode_ros.write(ros_string);
 
 	for (size_t i = 0; i < YOUBOT_NR_OF_WHEELS; i++)
 	    ((out_motor_t*) (m_wheels[i].outputs))->controller_mode = m_control_mode;

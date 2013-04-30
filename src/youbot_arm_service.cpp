@@ -360,6 +360,8 @@ namespace youbot_driver{
 
     void YoubotArmService::process_data_handle() 
     {
+	if(port_control_mode_ros.read(ros_string)==NewData)			//receive data via ROS
+		m_control_mode = str2control_mode(ros_string.data);
 	// tbd: do this only once during start 
 	for(unsigned int i=0; i < YOUBOT_NR_OF_JOINTS;i++)
             m_in_motor[i] = (in_motor_t*) m_joints[i].inputs;
@@ -381,10 +383,7 @@ namespace youbot_driver{
 	}
 
 	// tbd: write only when changed.
-	port_control_mode.write(control_mode2str(m_control_mode));
-    ros_string.data=control_mode2str(m_control_mode);           //send data via ROS
-    port_control_mode_ros.write(ros_string);
-
+	port_control_mode.write(control_mode2str(m_control_mode));           
 	for (unsigned int i = 0; i < YOUBOT_NR_OF_JOINTS; i++)
 	    ((out_motor_t*) (m_joints[i].outputs))->controller_mode = m_control_modes[i];
 

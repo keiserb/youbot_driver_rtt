@@ -65,9 +65,9 @@ namespace youbot_driver{
 	RTT::OutputPort<sensor_msgs::JointState> port_joint_state;
 	RTT::OutputPort<std::string> port_control_mode;
 	RTT::OutputPort<std::string> port_events;
-	RTT::OutputPort<std_msgs::String> port_control_mode_ros;		//add ROS functionality to String msgs
 	RTT::OutputPort<std_msgs::String> port_events_ros;				//add ROS functionality to String msgs
 
+	RTT::InputPort<std_msgs::String> port_control_mode_ros;		//add ROS functionality to String msgs	
 	RTT::InputPort<motion_control_msgs::JointVelocities> port_cmd_vel;
 	RTT::InputPort<motion_control_msgs::JointPositions> port_cmd_pos;
 	RTT::InputPort<motion_control_msgs::JointEfforts> port_cmd_eff;

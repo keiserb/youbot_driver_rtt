@@ -48,6 +48,26 @@ namespace youbot_driver {
 	rtos_nanosleep(&ts, NULL);
     }
 
+    ControlMode str2control_mode(std::string string)
+    {
+	if(string=="MotorStop")
+		return MotorStop;
+	else if(string=="Positioning")
+		return Positioning;
+	else if(string=="Velocity")
+		return Velocity;
+	else if(string=="NoAction")
+		return NoAction;
+	else if(string=="SetPositionToReference")
+		return SetPositionToReference;
+	else if(string=="PWM")
+		return PWM;
+	else if(string=="Current")
+		return Current;
+	else
+		return Initialize;
+    }
+
     std::string control_mode2str(ControlMode cm)
     {
 	switch (cm) {

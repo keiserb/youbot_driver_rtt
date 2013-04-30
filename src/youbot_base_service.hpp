@@ -67,12 +67,11 @@ namespace youbot_driver {
 	InputPort<geometry_msgs::Twist> port_cmd_twist;
 	InputPort<std::vector<int> > port_cmd_current;
 	InputPort<std_msgs::Int32MultiArray> port_cmd_current_ros;		//add ROS functionality to cmd_current
-
+	InputPort<std_msgs::String> port_control_mode_ros;		//add ROS functionality to String msgs
 	OutputPort<nav_msgs::Odometry> port_odom;
 	OutputPort<youbot_msgs::motor_states> port_motor_states;
 	OutputPort<std::string> port_control_mode;
 	OutputPort<std::string> events;
-	OutputPort<std_msgs::String> port_control_mode_ros;		//add ROS functionality to String msgs
 	OutputPort<std_msgs::String> events_ros;				//add ROS functionality to String msgs
 
 	// Slaves corresponding with the wheels

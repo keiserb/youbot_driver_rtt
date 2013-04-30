@@ -43,6 +43,7 @@
 
 namespace youbot_driver {
     void rtt_sleep(int ms);
+    ControlMode str2control_mode(std::string string);
     std::string control_mode2str(ControlMode cm);
     std::string& make_event(std::string& s, const char* event, int num);
 }
