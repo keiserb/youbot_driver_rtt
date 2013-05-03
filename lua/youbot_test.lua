@@ -95,7 +95,7 @@ function bstop() base:setControlMode(0) end
 
 if not yb:start() then errmsg("Failed to start youbot") end
 
-
+--[[
 --publish other output ports on ROS Nodes
 depl:stream("youbot.Arm1.motor_states", rtt.provides("ros"):topic("arm_motor_states"))
 depl:stream("youbot.Arm1.jointstate", rtt.provides("ros"):topic("joint_states"))
@@ -112,7 +112,7 @@ depl:stream("youbot.Base.events_ros", rtt.provides("ros"):topic("base_events"))
 depl:stream("youbot.Base.cmd_twist", rtt.provides("ros"):topic("cmd_vel"))
 depl:stream("youbot.Base.cmd_current_ros", rtt.provides("ros"):topic("base_cmd_current"))
 depl:stream("youbot.driver_state", rtt.provides("ros"):topic("driver_state"))
-
+]]--
 
 
 -- wait until arm and base are configured
