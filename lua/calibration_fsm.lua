@@ -23,7 +23,6 @@ local ref_pos = {[0]=2.8793,1.1414,2.50552,1.76662,2.8767}
 local move_in_vel = 0.005
 local move_out_vel = -0.02
 
-
 --- Setup starts here
 local arm = rtt.getTC():provides("Arm1")
 local cmd_vel = rttlib.port_clone_conn(arm:getPort("joint_velocity_command"))

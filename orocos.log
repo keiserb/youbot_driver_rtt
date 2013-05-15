@@ -1,301 +1,300 @@
 0.000 [ Info   ][Logger] No ORO_LOGLEVEL environment variable set.
 0.000 [ Info   ][Logger]  OROCOS version '2.6.0' compiled with GCC 4.6.3. Running in GNU/Linux.
 0.000 [ Info   ][Logger] Orocos Logging Activated at level : [ Warning] ( 4 ) 
-0.000 [ Info   ][Logger] Reference System Time is : 1367483685847944499 ticks ( 1.36748e+09 seconds ).
-0.000 [ Info   ][Logger] Logging is relative to this time.
+0.001 [ Info   ][Logger] Reference System Time is : 1368432711880918322 ticks ( 1.36843e+09 seconds ).
+0.001 [ Info   ][Logger] Logging is relative to this time.
 0.001 [ Info   ][Logger] No RTT_COMPONENT_PATH set. Using default: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos
 0.001 [ Info   ][Logger] plugin 'rtt' not loaded before.
 0.001 [ Info   ][Logger] Loading plugin libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/./plugins ...
-0.002 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
-0.002 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
-0.002 [ Info   ][Logger] typekit 'rtt' not loaded before.
-0.002 [ Info   ][Logger] Loading typekit libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/./types ...
-0.067 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
-0.068 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
-0.132 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://rtt-types.
-0.132 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for ConnPolicy
-0.132 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for TaskContext
-0.132 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for array
-0.132 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for bool
-0.132 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for char
-0.133 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for double
-0.133 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for float
-0.133 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for int
-0.133 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for string
-0.133 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for uint
-0.133 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for void
-0.133 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-corba-types' from 'rtt-transport-corba'
-0.142 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
-0.142 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
-0.142 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
-0.142 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
-0.142 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
-0.142 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
-0.142 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
-0.142 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
-0.142 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
-0.142 [ Info   ][Logger] No RTT_COMPONENT_PATH set. Using default: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos
-0.143 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='lua'
-0.143 [ Info   ][lua] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 3695 ).
-0.143 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
-0.144 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 3696 ).
-0.145 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Deployer'
-0.146 [ Info   ][Deployer] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 3697 ).
-0.147 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] No site file was found. Importing 'ocl' by default.
-0.155 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl ...
-0.164 [ Info   ][DeploymentComponent::import] Loaded multi component library '/opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/liborocos-ocl-timer-gnulinux.so'
-0.169 [ Info   ][DeploymentComponent::import] Loaded multi component library '/opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-gnulinux.so'
-0.172 [ Info   ][DeploymentComponent::import] Loaded component type 'OCL::LuaTLSFComponent'
-0.176 [ Info   ][DeploymentComponent::import] Loaded multi component library '/opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/liborocos-ocl-logging-gnulinux.so'
-0.182 [ Info   ][DeploymentComponent::import] Loaded component type 'OCL::HelloWorld'
-0.184 [ Info   ][DeploymentComponent::import] Loaded component type 'OCL::LuaComponent'
-0.190 [ Info   ][DeploymentComponent::import] Loaded multi component library '/opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/liborocos-ocl-common-gnulinux.so'
-0.266 [ Info   ][DeploymentComponent::import] Loaded multi component library '/opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-netcdf-gnulinux.so'
-0.266 [ Info   ][DeploymentComponent::import] Loaded component type 'OCL::NetcdfReporting'
-0.266 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/types ...
-0.286 [ Info   ][TypekitRepository::Import] Loading Typekit OCLTypekit.
-0.286 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'OCLTypekit' from 'ocl'
-0.286 [ Info   ][DeploymentComponent::import] Loading plugin libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/plugins ...
-0.288 [ Info   ][DeploymentComponent::import] Loaded RTT Service 'Lua' from 'rttlua-plugin'
-0.291 [ Info   ][DeploymentComponent::import] Loaded RTT Service 'LuaTLSF' from 'rttlua-tlsf-plugin'
-0.296 [ Info   ][DeploymentComponent::import] Loaded RTT Service 'os' from 'os'
-0.300 [ Info   ][DeploymentComponent::import] Loaded RTT Service 'print' from 'print'
-0.335 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rospack/lib/orocos/gnulinux ...
-0.335 [ Info   ][DeploymentComponent::import] Loading plugin libraries from directory /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rospack/lib/orocos/gnulinux/plugins ...
-0.338 [ Info   ][DeploymentComponent::import] Loaded RTT Plugin 'rospack' from 'rtt_rospack'
-0.339 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux ...
-0.339 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux/types ...
-0.552 [ Info   ][TypekitRepository::Import] Loading Typekit ros-primitives.
-0.555 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-primitives' from 'rtt-ros-primitives-typekit'
-0.555 [ Info   ][DeploymentComponent::import] Loading plugin libraries from directory /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux/plugins ...
-0.630 [ Info   ][DeploymentComponent::import] Loaded RTT Service 'rosparam' from 'rtt_rosparam_service'
-0.639 [ Info   ][DeploymentComponent::import] Initializing ROS node
-0.659 [ Info   ][DeploymentComponent::import] ROS node spinner started
-0.659 [ Info   ][DeploymentComponent::import] Loaded RTT Plugin 'ros_integration' from 'rtt_rosnode'
-0.660 [ Info   ][DeploymentComponent::import] Importing directory /home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux ...
-0.660 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux/types ...
-0.746 [ Info   ][TypekitRepository::Import] Loading Typekit ros-youbot_msgs.
-0.747 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-youbot_msgs' from 'rtt-youbot_msgs-typekit'
-0.762 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-youbot_msgs.
-0.762 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /youbot_msgs/driver_state
-0.762 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /youbot_msgs/error_count
-0.762 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /youbot_msgs/motor_state
-0.762 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /youbot_msgs/motor_states
-0.762 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-youbot_msgs-transport' from 'rtt-youbot_msgs-ros-transport'
-0.763 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_std_msgs/lib/orocos/gnulinux ...
-0.763 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_std_msgs/lib/orocos/gnulinux/types ...
-0.858 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-std_msgs.
-0.859 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-std_msgs-transport' from 'rtt-std_msgs-ros-transport'
-1.586 [ Info   ][TypekitRepository::Import] Loading Typekit ros-std_msgs.
-1.586 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Header
-1.586 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int8MultiArray
-1.587 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Empty
-1.587 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt16MultiArray
-1.587 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int32
-1.587 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Byte
-1.588 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt32
-1.588 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float32MultiArray
-1.588 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt64
-1.589 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt16
-1.589 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/MultiArrayDimension
-1.589 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float32
-1.590 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float64MultiArray
-1.590 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt8
-1.590 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int16
-1.590 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Char
-1.591 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int64MultiArray
-1.591 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int64
-1.591 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int8
-1.592 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float64
-1.592 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/ColorRGBA
-1.592 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/MultiArrayLayout
-1.593 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/ByteMultiArray
-1.593 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int32MultiArray
-1.593 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt8MultiArray
-1.594 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt32MultiArray
-1.594 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int16MultiArray
-1.594 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/String
-1.595 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Time
-1.595 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Duration
-1.595 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Bool
-1.596 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt64MultiArray
-1.596 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-std_msgs' from 'rtt-std_msgs-typekit'
-1.596 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_rosgraph_msgs/lib/orocos/gnulinux ...
-1.596 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_rosgraph_msgs/lib/orocos/gnulinux/types ...
-1.645 [ Info   ][TypekitRepository::Import] Loading Typekit ros-rosgraph_msgs.
-1.645 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-rosgraph_msgs' from 'rtt-rosgraph_msgs-typekit'
-1.655 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-rosgraph_msgs.
-1.655 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /rosgraph_msgs/Clock
-1.655 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /rosgraph_msgs/Log
-1.655 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-rosgraph_msgs-transport' from 'rtt-rosgraph_msgs-ros-transport'
-1.655 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_geometry_msgs/lib/orocos/gnulinux ...
-1.655 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_geometry_msgs/lib/orocos/gnulinux/types ...
-1.731 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-geometry_msgs.
-1.732 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-geometry_msgs-transport' from 'rtt-geometry_msgs-ros-transport'
-2.296 [ Info   ][TypekitRepository::Import] Loading Typekit ros-geometry_msgs.
-2.297 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Wrench
-2.297 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Vector3Stamped
-2.297 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Pose
-2.298 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PoseArray
-2.298 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Pose2D
-2.298 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/WrenchStamped
-2.299 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Point32
-2.299 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PoseWithCovariance
-2.300 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/QuaternionStamped
-2.300 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Twist
-2.300 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Quaternion
-2.301 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/TwistWithCovariance
-2.301 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Vector3
-2.302 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PoseStamped
-2.302 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Polygon
-2.302 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Transform
-2.303 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/TransformStamped
-2.303 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PointStamped
-2.304 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/TwistStamped
-2.304 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PoseWithCovarianceStamped
-2.305 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Point
-2.305 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/TwistWithCovarianceStamped
-2.305 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PolygonStamped
-2.306 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-geometry_msgs' from 'rtt-geometry_msgs-typekit'
-2.306 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_nav_msgs/lib/orocos/gnulinux ...
-2.306 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_nav_msgs/lib/orocos/gnulinux/types ...
-2.326 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-nav_msgs.
-2.326 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-nav_msgs-transport' from 'rtt-nav_msgs-ros-transport'
-2.457 [ Info   ][TypekitRepository::Import] Loading Typekit ros-nav_msgs.
-2.458 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /nav_msgs/MapMetaData
-2.458 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /nav_msgs/Path
-2.458 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /nav_msgs/OccupancyGrid
-2.459 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /nav_msgs/Odometry
-2.459 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /nav_msgs/GridCells
-2.459 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-nav_msgs' from 'rtt-nav_msgs-typekit'
-2.460 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_sensor_msgs/lib/orocos/gnulinux ...
-2.460 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_sensor_msgs/lib/orocos/gnulinux/types ...
-2.925 [ Info   ][TypekitRepository::Import] Loading Typekit ros-sensor_msgs.
-2.933 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-sensor_msgs' from 'rtt-sensor_msgs-typekit'
-3.003 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-sensor_msgs.
-3.003 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/CameraInfo
-3.003 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/ChannelFloat32
-3.003 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/CompressedImage
-3.003 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/Image
-3.003 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/Imu
-3.003 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/JointState
-3.003 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/Joy
-3.004 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/JoyFeedback
-3.004 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/JoyFeedbackArray
-3.004 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/LaserScan
-3.004 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/NavSatFix
-3.004 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/NavSatStatus
-3.004 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/PointCloud
-3.004 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/PointCloud2
-3.004 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/PointField
-3.004 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/Range
-3.004 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/RegionOfInterest
-3.004 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/TimeReference
-3.005 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-sensor_msgs-transport' from 'rtt-sensor_msgs-ros-transport'
-3.005 [ Info   ][DeploymentComponent::import] Importing directory /home/youbot/orocos/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux ...
-3.005 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /home/youbot/orocos/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux/types ...
-3.113 [ Info   ][TypekitRepository::Import] Loading Typekit ros-motion_control_msgs.
-3.115 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-motion_control_msgs' from 'rtt-motion_control_msgs-typekit'
-3.133 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-motion_control_msgs.
-3.133 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /motion_control_msgs/JointAccelerations
-3.133 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /motion_control_msgs/JointEfforts
-3.133 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /motion_control_msgs/JointPositions
-3.133 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /motion_control_msgs/JointVelocities
-3.134 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-motion_control_msgs-transport' from 'rtt-motion_control_msgs-ros-transport'
-3.134 [ Info   ][DeploymentComponent::import] Importing directory /home/youbot/orocos/youbot_hardware/youbot_driver_rtt/lib/orocos/gnulinux ...
-3.186 [ Info   ][DeploymentComponent::import] Loaded component type 'youbot_driver::YoubotDriver'
-3.187 [ Info   ][DeploymentComponent::import] Loading plugin libraries from directory /home/youbot/orocos/youbot_hardware/youbot_driver_rtt/lib/orocos/gnulinux/plugins ...
-3.188 [ Info   ][DeploymentComponent::import] Loaded RTT Plugin 'youbot-plugin' from 'youbot-plugin'
-3.190 [ Info   ][DeploymentComponent::import] Component package 'rtt_std_msgs' already imported.
-3.191 [ Info   ][DeploymentComponent::import] Component package 'rtt_youbot_msgs' already imported.
-3.192 [ Info   ][DeploymentComponent::import] Component package 'rtt_motion_control_msgs' already imported.
-3.193 [ Info   ][DeploymentComponent::import] Component package 'rtt_rosnode' already imported.
-3.194 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='youbot'
-3.195 [ Info   ][youbot] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 3709 ).
-3.195 [ Info   ][DeploymentComponent::loadComponent] Adding youbot as new peer:  OK.
-3.198 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_RT, priority=50, CPU affinity=4294967295, with name='youbot'
-3.198 [ Warning][Thread] Lowering scheduler type to SCHED_OTHER for non-privileged users..
-3.198 [ Warning][Thread] Forcing priority (50) of thread with SCHED_OTHER policy to 0.
-3.199 [ Warning][youbot] Lowering scheduler type to SCHED_OTHER for non-privileged users..
-3.199 [ Info   ][youbot] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0.002 (PID= 3710 ).
-3.201 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] Loading Service or Plugin Lua in TaskContext youbot
-4.118 [ Info   ][youbot] Found base power board KR-845
-4.118 [ Info   ][youbot] Found wheel slave TMCM-1632
-4.118 [ Info   ][youbot] Found wheel slave TMCM-1632
-4.120 [ Info   ][youbot] Detected youbot base, loading Base service
-4.120 [ Info   ][youbot] Found arm power board KR-843
-4.120 [ Info   ][youbot] Detected youbot arm.
-4.121 [ Info   ][youbot] Detected youbot arm, loading Arm1 service
-4.122 [ Info   ][youbot] Configuring base.
-4.122 [ Info   ][youbot] setDefParam: slave: 2   param nr: 159   desval: 3
-4.124 [ Info   ][youbot] setDefParam: slave: 3   param nr: 159   desval: 3
-4.125 [ Info   ][youbot] setDefParam: slave: 4   param nr: 159   desval: 3
-4.127 [ Info   ][youbot] setDefParam: slave: 5   param nr: 159   desval: 3
-4.129 [ Info   ][youbot] setDefParam: slave: 2   param nr: 167   desval: 0
-4.131 [ Info   ][youbot] setDefParam: slave: 3   param nr: 167   desval: 0
-4.132 [ Info   ][youbot] setDefParam: slave: 4   param nr: 167   desval: 0
-4.134 [ Info   ][youbot] setDefParam: slave: 5   param nr: 167   desval: 0
-4.136 [ Info   ][youbot] setDefParam: slave: 2   param nr: 249   desval: 1
-4.138 [ Info   ][youbot] setDefParam: slave: 3   param nr: 249   desval: 1
-4.140 [ Info   ][youbot] setDefParam: slave: 4   param nr: 249   desval: 1
-4.141 [ Info   ][youbot] setDefParam: slave: 5   param nr: 249   desval: 1
-4.143 [ Info   ][youbot] setDefParam: slave: 2   param nr: 250   desval: 4000
-4.145 [ Info   ][youbot] setDefParam: slave: 3   param nr: 250   desval: 4000
-4.146 [ Info   ][youbot] setDefParam: slave: 4   param nr: 250   desval: 4000
-4.148 [ Info   ][youbot] setDefParam: slave: 5   param nr: 250   desval: 4000
-4.150 [ Info   ][youbot] setDefParam: slave: 2   param nr: 251   desval: 1
-4.152 [ Info   ][youbot] setDefParam: slave: 3   param nr: 251   desval: 1
-4.153 [ Info   ][youbot] setDefParam: slave: 4   param nr: 251   desval: 1
-4.155 [ Info   ][youbot] setDefParam: slave: 5   param nr: 251   desval: 1
-4.157 [ Info   ][youbot] setDefParam: slave: 2   param nr: 253   desval: 16
-4.159 [ Info   ][youbot] setDefParam: slave: 3   param nr: 253   desval: 16
-4.160 [ Info   ][youbot] setDefParam: slave: 4   param nr: 253   desval: 16
-4.162 [ Info   ][youbot] setDefParam: slave: 5   param nr: 253   desval: 16
-4.164 [ Info   ][youbot] setDefParam: slave: 2   param nr: 254   desval: 1
-4.166 [ Info   ][youbot] setDefParam: slave: 3   param nr: 254   desval: 1
-4.168 [ Info   ][youbot] setDefParam: slave: 4   param nr: 254   desval: 1
-4.169 [ Info   ][youbot] setDefParam: slave: 5   param nr: 254   desval: 1
-4.171 [ Info   ][youbot] Calibrating arm service
-4.171 [ Info   ][youbot] setDefParam: slave: 7   param nr: 159   desval: 3
-4.172 [ Info   ][youbot] setDefParam: slave: 8   param nr: 159   desval: 3
-4.174 [ Info   ][youbot] setDefParam: slave: 9   param nr: 159   desval: 3
-4.175 [ Info   ][youbot] setDefParam: slave: 10   param nr: 159   desval: 3
-4.176 [ Info   ][youbot] setDefParam: slave: 7   param nr: 167   desval: 0
-4.178 [ Info   ][youbot] setDefParam: slave: 8   param nr: 167   desval: 0
-4.179 [ Info   ][youbot] setDefParam: slave: 9   param nr: 167   desval: 0
-4.181 [ Info   ][youbot] setDefParam: slave: 10   param nr: 167   desval: 0
-4.182 [ Info   ][youbot] setDefParam: slave: 7   param nr: 249   desval: 1
-4.184 [ Info   ][youbot] setDefParam: slave: 8   param nr: 249   desval: 1
-4.185 [ Info   ][youbot] setDefParam: slave: 9   param nr: 249   desval: 1
-4.187 [ Info   ][youbot] setDefParam: slave: 10   param nr: 249   desval: 1
-4.189 [ Info   ][youbot] setDefParam: slave: 7   param nr: 250   desval: 4000
-4.191 [ Info   ][youbot] setDefParam: slave: 8   param nr: 250   desval: 4000
-4.192 [ Info   ][youbot] setDefParam: slave: 9   param nr: 250   desval: 4000
-4.194 [ Info   ][youbot] setDefParam: slave: 10   param nr: 250   desval: 4000
-4.196 [ Info   ][youbot] setDefParam: slave: 7   param nr: 251   desval: 1
-4.198 [ Info   ][youbot] setDefParam: slave: 8   param nr: 251   desval: 1
-4.199 [ Info   ][youbot] setDefParam: slave: 9   param nr: 251   desval: 1
-4.200 [ Info   ][youbot] setDefParam: slave: 10   param nr: 251   desval: 1
-4.202 [ Info   ][youbot] setDefParam: slave: 7   param nr: 253   desval: 16
-4.204 [ Info   ][youbot] setDefParam: slave: 8   param nr: 253   desval: 16
-4.206 [ Info   ][youbot] setDefParam: slave: 9   param nr: 253   desval: 16
-4.208 [ Info   ][youbot] setDefParam: slave: 10   param nr: 253   desval: 16
-4.209 [ Info   ][youbot] setDefParam: slave: 7   param nr: 254   desval: 1
-4.211 [ Info   ][youbot] setDefParam: slave: 8   param nr: 254   desval: 1
-4.212 [ Info   ][youbot] setDefParam: slave: 9   param nr: 254   desval: 1
-4.214 [ Info   ][youbot] setDefParam: slave: 10   param nr: 254   desval: 1
-4.217 [ Info   ][youbot] configure: setting axis 0 to 5768
-4.219 [ Info   ][youbot] configure: setting axis 1 to 5768
-4.220 [ Info   ][youbot] configure: setting axis 2 to 3899
-4.222 [ Info   ][youbot] configure: setting axis 3 to 2746
-4.224 [ Info   ][youbot] configure: setting axis 4 to 1750
-4.236 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] Request operational state for all slaves
-4.238 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] Operational state reached for all slaves.
-4.244 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] YoubotBaseService: started
-4.251 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] YoubotArmService: started
-4.261 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] arm: MODULE_INIT set for slave0
-4.262 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] arm: MODULE_INIT set for slave1
-4.264 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] arm: MODULE_INIT set for slave2
-4.265 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] arm: MODULE_INIT set for slave3
-4.267 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] arm: MODULE_INIT set for slave4
-5.254 [ Info   ][DeploymentComponent::import] Component package 'rtt_rospack' already imported.
+0.003 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
+0.005 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
+0.005 [ Info   ][Logger] typekit 'rtt' not loaded before.
+0.005 [ Info   ][Logger] Loading typekit libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/./types ...
+0.101 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
+0.118 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
+0.207 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://rtt-types.
+0.207 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for ConnPolicy
+0.207 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for TaskContext
+0.207 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for array
+0.207 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for bool
+0.207 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for char
+0.208 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for double
+0.208 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for float
+0.208 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for int
+0.208 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for string
+0.208 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for uint
+0.208 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for void
+0.208 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-corba-types' from 'rtt-transport-corba'
+0.222 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
+0.222 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
+0.222 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
+0.222 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
+0.222 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
+0.222 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
+0.222 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
+0.222 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
+0.222 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
+0.222 [ Info   ][Logger] No RTT_COMPONENT_PATH set. Using default: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos
+0.223 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='lua'
+0.223 [ Info   ][lua] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 2459 ).
+0.223 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
+0.224 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 2460 ).
+0.225 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Deployer'
+0.226 [ Info   ][Deployer] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 2461 ).
+0.229 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] No site file was found. Importing 'ocl' by default.
+0.238 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl ...
+0.254 [ Info   ][DeploymentComponent::import] Loaded multi component library '/opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/liborocos-ocl-timer-gnulinux.so'
+0.265 [ Info   ][DeploymentComponent::import] Loaded multi component library '/opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-gnulinux.so'
+0.272 [ Info   ][DeploymentComponent::import] Loaded component type 'OCL::LuaTLSFComponent'
+0.283 [ Info   ][DeploymentComponent::import] Loaded multi component library '/opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/liborocos-ocl-logging-gnulinux.so'
+0.294 [ Info   ][DeploymentComponent::import] Loaded component type 'OCL::HelloWorld'
+0.300 [ Info   ][DeploymentComponent::import] Loaded component type 'OCL::LuaComponent'
+0.310 [ Info   ][DeploymentComponent::import] Loaded multi component library '/opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/liborocos-ocl-common-gnulinux.so'
+0.407 [ Info   ][DeploymentComponent::import] Loaded multi component library '/opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-netcdf-gnulinux.so'
+0.407 [ Info   ][DeploymentComponent::import] Loaded component type 'OCL::NetcdfReporting'
+0.407 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/types ...
+0.436 [ Info   ][TypekitRepository::Import] Loading Typekit OCLTypekit.
+0.438 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'OCLTypekit' from 'ocl'
+0.438 [ Info   ][DeploymentComponent::import] Loading plugin libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/ocl/plugins ...
+0.443 [ Info   ][DeploymentComponent::import] Loaded RTT Service 'Lua' from 'rttlua-plugin'
+0.451 [ Info   ][DeploymentComponent::import] Loaded RTT Service 'LuaTLSF' from 'rttlua-tlsf-plugin'
+0.462 [ Info   ][DeploymentComponent::import] Loaded RTT Service 'os' from 'os'
+0.469 [ Info   ][DeploymentComponent::import] Loaded RTT Service 'print' from 'print'
+0.523 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rospack/lib/orocos/gnulinux ...
+0.524 [ Info   ][DeploymentComponent::import] Loading plugin libraries from directory /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rospack/lib/orocos/gnulinux/plugins ...
+0.533 [ Info   ][DeploymentComponent::import] Loaded RTT Plugin 'rospack' from 'rtt_rospack'
+0.534 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux ...
+0.534 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux/types ...
+0.791 [ Info   ][TypekitRepository::Import] Loading Typekit ros-primitives.
+0.815 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-primitives' from 'rtt-ros-primitives-typekit'
+0.815 [ Info   ][DeploymentComponent::import] Loading plugin libraries from directory /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux/plugins ...
+0.894 [ Info   ][DeploymentComponent::import] Loaded RTT Service 'rosparam' from 'rtt_rosparam_service'
+0.907 [ Info   ][DeploymentComponent::import] Initializing ROS node
+0.927 [ Info   ][DeploymentComponent::import] ROS node spinner started
+0.928 [ Info   ][DeploymentComponent::import] Loaded RTT Plugin 'ros_integration' from 'rtt_rosnode'
+0.929 [ Info   ][DeploymentComponent::import] Importing directory /home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux ...
+0.929 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux/types ...
+1.037 [ Info   ][TypekitRepository::Import] Loading Typekit ros-youbot_msgs.
+1.037 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-youbot_msgs' from 'rtt-youbot_msgs-typekit'
+1.058 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-youbot_msgs.
+1.058 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /youbot_msgs/driver_state
+1.058 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /youbot_msgs/error_count
+1.059 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /youbot_msgs/motor_state
+1.059 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /youbot_msgs/motor_states
+1.059 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-youbot_msgs-transport' from 'rtt-youbot_msgs-ros-transport'
+1.061 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_std_msgs/lib/orocos/gnulinux ...
+1.062 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_std_msgs/lib/orocos/gnulinux/types ...
+1.177 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-std_msgs.
+1.177 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-std_msgs-transport' from 'rtt-std_msgs-ros-transport'
+2.012 [ Info   ][TypekitRepository::Import] Loading Typekit ros-std_msgs.
+2.014 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Header
+2.015 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int8MultiArray
+2.018 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Empty
+2.020 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt16MultiArray
+2.024 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int32
+2.025 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Byte
+2.026 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt32
+2.027 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float32MultiArray
+2.029 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt64
+2.030 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt16
+2.031 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/MultiArrayDimension
+2.034 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float32
+2.036 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float64MultiArray
+2.037 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt8
+2.038 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int16
+2.039 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Char
+2.040 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int64MultiArray
+2.042 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int64
+2.043 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int8
+2.044 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float64
+2.046 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/ColorRGBA
+2.047 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/MultiArrayLayout
+2.049 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/ByteMultiArray
+2.051 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int32MultiArray
+2.054 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt8MultiArray
+2.055 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt32MultiArray
+2.058 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int16MultiArray
+2.059 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/String
+2.060 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Time
+2.061 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Duration
+2.062 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Bool
+2.063 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt64MultiArray
+2.063 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-std_msgs' from 'rtt-std_msgs-typekit'
+2.064 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_rosgraph_msgs/lib/orocos/gnulinux ...
+2.065 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_rosgraph_msgs/lib/orocos/gnulinux/types ...
+2.125 [ Info   ][TypekitRepository::Import] Loading Typekit ros-rosgraph_msgs.
+2.126 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-rosgraph_msgs' from 'rtt-rosgraph_msgs-typekit'
+2.139 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-rosgraph_msgs.
+2.139 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /rosgraph_msgs/Clock
+2.139 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /rosgraph_msgs/Log
+2.139 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-rosgraph_msgs-transport' from 'rtt-rosgraph_msgs-ros-transport'
+2.140 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_geometry_msgs/lib/orocos/gnulinux ...
+2.141 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_geometry_msgs/lib/orocos/gnulinux/types ...
+2.234 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-geometry_msgs.
+2.235 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-geometry_msgs-transport' from 'rtt-geometry_msgs-ros-transport'
+2.886 [ Info   ][TypekitRepository::Import] Loading Typekit ros-geometry_msgs.
+2.886 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Wrench
+2.888 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Vector3Stamped
+2.890 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Pose
+2.891 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PoseArray
+2.893 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Pose2D
+2.895 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/WrenchStamped
+2.896 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Point32
+2.899 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PoseWithCovariance
+2.903 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/QuaternionStamped
+2.904 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Twist
+2.905 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Quaternion
+2.907 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/TwistWithCovariance
+2.908 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Vector3
+2.910 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PoseStamped
+2.911 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Polygon
+2.912 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Transform
+2.916 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/TransformStamped
+2.918 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PointStamped
+2.919 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/TwistStamped
+2.921 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PoseWithCovarianceStamped
+2.922 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/Point
+2.924 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/TwistWithCovarianceStamped
+2.925 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /geometry_msgs/PolygonStamped
+2.925 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-geometry_msgs' from 'rtt-geometry_msgs-typekit'
+2.926 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_nav_msgs/lib/orocos/gnulinux ...
+2.927 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_nav_msgs/lib/orocos/gnulinux/types ...
+2.954 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-nav_msgs.
+2.954 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-nav_msgs-transport' from 'rtt-nav_msgs-ros-transport'
+3.109 [ Info   ][TypekitRepository::Import] Loading Typekit ros-nav_msgs.
+3.110 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /nav_msgs/MapMetaData
+3.111 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /nav_msgs/Path
+3.113 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /nav_msgs/OccupancyGrid
+3.113 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /nav_msgs/Odometry
+3.116 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /nav_msgs/GridCells
+3.116 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-nav_msgs' from 'rtt-nav_msgs-typekit'
+3.117 [ Info   ][DeploymentComponent::import] Importing directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_sensor_msgs/lib/orocos/gnulinux ...
+3.118 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_sensor_msgs/lib/orocos/gnulinux/types ...
+3.672 [ Info   ][TypekitRepository::Import] Loading Typekit ros-sensor_msgs.
+3.690 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-sensor_msgs' from 'rtt-sensor_msgs-typekit'
+3.773 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-sensor_msgs.
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/CameraInfo
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/ChannelFloat32
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/CompressedImage
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/Image
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/Imu
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/JointState
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/Joy
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/JoyFeedback
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/JoyFeedbackArray
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/LaserScan
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/NavSatFix
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/NavSatStatus
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/PointCloud
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/PointCloud2
+3.774 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/PointField
+3.775 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/Range
+3.775 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/RegionOfInterest
+3.775 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /sensor_msgs/TimeReference
+3.775 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-sensor_msgs-transport' from 'rtt-sensor_msgs-ros-transport'
+3.776 [ Info   ][DeploymentComponent::import] Importing directory /home/youbot/orocos/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux ...
+3.777 [ Info   ][DeploymentComponent::import] Loading typekit libraries from directory /home/youbot/orocos/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux/types ...
+3.909 [ Info   ][TypekitRepository::Import] Loading Typekit ros-motion_control_msgs.
+3.912 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'ros-motion_control_msgs' from 'rtt-motion_control_msgs-typekit'
+3.936 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-motion_control_msgs.
+3.936 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /motion_control_msgs/JointAccelerations
+3.937 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /motion_control_msgs/JointEfforts
+3.937 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /motion_control_msgs/JointPositions
+3.937 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /motion_control_msgs/JointVelocities
+3.937 [ Info   ][DeploymentComponent::import] Loaded RTT TypeKit/Transport 'rtt-ros-motion_control_msgs-transport' from 'rtt-motion_control_msgs-ros-transport'
+3.938 [ Info   ][DeploymentComponent::import] Importing directory /home/youbot/orocos/youbot_hardware/youbot_driver_rtt/lib/orocos/gnulinux ...
+4.006 [ Info   ][DeploymentComponent::import] Loaded component type 'youbot_driver::YoubotDriver'
+4.007 [ Info   ][DeploymentComponent::import] Loading plugin libraries from directory /home/youbot/orocos/youbot_hardware/youbot_driver_rtt/lib/orocos/gnulinux/plugins ...
+4.010 [ Info   ][DeploymentComponent::import] Loaded RTT Plugin 'youbot-plugin' from 'youbot-plugin'
+4.012 [ Info   ][DeploymentComponent::import] Component package 'rtt_std_msgs' already imported.
+4.013 [ Info   ][DeploymentComponent::import] Component package 'rtt_youbot_msgs' already imported.
+4.014 [ Info   ][DeploymentComponent::import] Component package 'rtt_motion_control_msgs' already imported.
+4.015 [ Info   ][DeploymentComponent::import] Component package 'rtt_rosnode' already imported.
+4.017 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='youbot'
+4.017 [ Info   ][youbot] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 2473 ).
+4.019 [ Info   ][DeploymentComponent::loadComponent] Adding youbot as new peer:  OK.
+4.024 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_RT, priority=50, CPU affinity=4294967295, with name='youbot'
+4.024 [ Warning][Thread] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+4.025 [ Warning][Thread] Forcing priority (50) of thread with SCHED_OTHER policy to 0.
+4.025 [ Warning][youbot] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+4.025 [ Info   ][youbot] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0.002 (PID= 2474 ).
+4.027 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] Loading Service or Plugin Lua in TaskContext youbot
+4.927 [ Info   ][youbot] Found base power board KR-845
+4.927 [ Info   ][youbot] Found wheel slave TMCM-1632
+4.927 [ Info   ][youbot] Found wheel slave TMCM-1632
+4.931 [ Info   ][youbot] Detected youbot base, loading Base service
+4.934 [ Info   ][youbot] Found arm power board KR-843
+4.934 [ Info   ][youbot] Detected youbot arm.
+4.937 [ Info   ][youbot] Detected youbot arm, loading Arm1 service
+4.938 [ Info   ][youbot] Configuring base.
+4.938 [ Info   ][youbot] setDefParam: slave: 2   param nr: 159   desval: 3
+4.940 [ Info   ][youbot] setDefParam: slave: 3   param nr: 159   desval: 3
+4.942 [ Info   ][youbot] setDefParam: slave: 4   param nr: 159   desval: 3
+4.943 [ Info   ][youbot] setDefParam: slave: 5   param nr: 159   desval: 3
+4.945 [ Info   ][youbot] setDefParam: slave: 2   param nr: 167   desval: 0
+4.947 [ Info   ][youbot] setDefParam: slave: 3   param nr: 167   desval: 0
+4.949 [ Info   ][youbot] setDefParam: slave: 4   param nr: 167   desval: 0
+4.950 [ Info   ][youbot] setDefParam: slave: 5   param nr: 167   desval: 0
+4.952 [ Info   ][youbot] setDefParam: slave: 2   param nr: 249   desval: 1
+4.954 [ Info   ][youbot] setDefParam: slave: 3   param nr: 249   desval: 1
+4.956 [ Info   ][youbot] setDefParam: slave: 4   param nr: 249   desval: 1
+4.957 [ Info   ][youbot] setDefParam: slave: 5   param nr: 249   desval: 1
+4.959 [ Info   ][youbot] setDefParam: slave: 2   param nr: 250   desval: 4000
+4.961 [ Info   ][youbot] setDefParam: slave: 3   param nr: 250   desval: 4000
+4.963 [ Info   ][youbot] setDefParam: slave: 4   param nr: 250   desval: 4000
+4.964 [ Info   ][youbot] setDefParam: slave: 5   param nr: 250   desval: 4000
+4.966 [ Info   ][youbot] setDefParam: slave: 2   param nr: 251   desval: 1
+4.968 [ Info   ][youbot] setDefParam: slave: 3   param nr: 251   desval: 1
+4.970 [ Info   ][youbot] setDefParam: slave: 4   param nr: 251   desval: 1
+4.971 [ Info   ][youbot] setDefParam: slave: 5   param nr: 251   desval: 1
+4.973 [ Info   ][youbot] setDefParam: slave: 2   param nr: 253   desval: 16
+4.975 [ Info   ][youbot] setDefParam: slave: 3   param nr: 253   desval: 16
+4.977 [ Info   ][youbot] setDefParam: slave: 4   param nr: 253   desval: 16
+4.978 [ Info   ][youbot] setDefParam: slave: 5   param nr: 253   desval: 16
+4.980 [ Info   ][youbot] setDefParam: slave: 2   param nr: 254   desval: 1
+4.982 [ Info   ][youbot] setDefParam: slave: 3   param nr: 254   desval: 1
+4.984 [ Info   ][youbot] setDefParam: slave: 4   param nr: 254   desval: 1
+4.985 [ Info   ][youbot] setDefParam: slave: 5   param nr: 254   desval: 1
+4.987 [ Info   ][youbot] Calibrating arm service
+4.987 [ Info   ][youbot] setDefParam: slave: 7   param nr: 159   desval: 3
+4.989 [ Info   ][youbot] setDefParam: slave: 8   param nr: 159   desval: 3
+4.991 [ Info   ][youbot] setDefParam: slave: 9   param nr: 159   desval: 3
+4.992 [ Info   ][youbot] setDefParam: slave: 10   param nr: 159   desval: 3
+4.994 [ Info   ][youbot] setDefParam: slave: 7   param nr: 167   desval: 0
+4.996 [ Info   ][youbot] setDefParam: slave: 8   param nr: 167   desval: 0
+4.998 [ Info   ][youbot] setDefParam: slave: 9   param nr: 167   desval: 0
+4.999 [ Info   ][youbot] setDefParam: slave: 10   param nr: 167   desval: 0
+5.001 [ Info   ][youbot] setDefParam: slave: 7   param nr: 249   desval: 1
+5.003 [ Info   ][youbot] setDefParam: slave: 8   param nr: 249   desval: 1
+5.005 [ Info   ][youbot] setDefParam: slave: 9   param nr: 249   desval: 1
+5.006 [ Info   ][youbot] setDefParam: slave: 10   param nr: 249   desval: 1
+5.008 [ Info   ][youbot] setDefParam: slave: 7   param nr: 250   desval: 4000
+5.009 [ Info   ][youbot] setDefParam: slave: 8   param nr: 250   desval: 4000
+5.011 [ Info   ][youbot] setDefParam: slave: 9   param nr: 250   desval: 4000
+5.012 [ Info   ][youbot] setDefParam: slave: 10   param nr: 250   desval: 4000
+5.014 [ Info   ][youbot] setDefParam: slave: 7   param nr: 251   desval: 1
+5.016 [ Info   ][youbot] setDefParam: slave: 8   param nr: 251   desval: 1
+5.018 [ Info   ][youbot] setDefParam: slave: 9   param nr: 251   desval: 1
+5.019 [ Info   ][youbot] setDefParam: slave: 10   param nr: 251   desval: 1
+5.020 [ Info   ][youbot] setDefParam: slave: 7   param nr: 253   desval: 16
+5.022 [ Info   ][youbot] setDefParam: slave: 8   param nr: 253   desval: 16
+5.024 [ Info   ][youbot] setDefParam: slave: 9   param nr: 253   desval: 16
+5.026 [ Info   ][youbot] setDefParam: slave: 10   param nr: 253   desval: 16
+5.027 [ Info   ][youbot] setDefParam: slave: 7   param nr: 254   desval: 1
+5.029 [ Info   ][youbot] setDefParam: slave: 8   param nr: 254   desval: 1
+5.031 [ Info   ][youbot] setDefParam: slave: 9   param nr: 254   desval: 1
+5.032 [ Info   ][youbot] setDefParam: slave: 10   param nr: 254   desval: 1
+5.036 [ Info   ][youbot] configure: setting axis 0 to 5768
+5.037 [ Info   ][youbot] configure: setting axis 1 to 5768
+5.039 [ Info   ][youbot] configure: setting axis 2 to 3899
+5.040 [ Info   ][youbot] configure: setting axis 3 to 2746
+5.042 [ Info   ][youbot] configure: setting axis 4 to 1750
+5.045 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] Request operational state for all slaves
+5.047 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] Operational state reached for all slaves.
+5.053 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] YoubotBaseService: started
+5.061 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] YoubotArmService: started
+5.644 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] arm: MODULE_INIT set for slave3
+5.688 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] arm: MODULE_INIT set for slave0
+5.866 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] arm: MODULE_INIT set for slave2
+5.868 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] arm: MODULE_INIT set for slave4
+24.760 [ Info   ][/opt/ros/fuerte/stacks/orocos_toolchain/ocl/bin/rttlua-gnulinux::main()] arm: MODULE_INIT set for slave1

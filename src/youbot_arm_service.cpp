@@ -361,7 +361,9 @@ namespace youbot_driver{
     void YoubotArmService::process_data_handle() 
     {
 	if(port_control_mode_ros.read(ros_string)==NewData)			//receive data via ROS
+	{
 		m_control_mode = str2control_mode(ros_string.data);
+	}
 	// tbd: do this only once during start 
 	for(unsigned int i=0; i < YOUBOT_NR_OF_JOINTS;i++)
             m_in_motor[i] = (in_motor_t*) m_joints[i].inputs;
@@ -386,12 +388,11 @@ namespace youbot_driver{
 	port_control_mode.write(control_mode2str(m_control_mode));           
 	for (unsigned int i = 0; i < YOUBOT_NR_OF_JOINTS; i++)
 	    ((out_motor_t*) (m_joints[i].outputs))->controller_mode = m_control_modes[i];
-
 	switch (m_control_mode) {
 	case MotorStop:
 	    break;
 	case Positioning:
-	    if (NoData != port_cmd_pos.read(m_cmd_pos)){
+		if (NoData != port_cmd_pos.read(m_cmd_pos)){
 		if( m_cmd_pos.positions.size() == YOUBOT_NR_OF_JOINTS) {
 		    for (unsigned int i = 0; i < YOUBOT_NR_OF_JOINTS; i++) {
 			double pos_conversion = 2*M_PI/(YOUBOT_ARM_JOINT_GEAR_RATIOS[i]*YOUBOT_TICKS_PER_REVOLUTION);
@@ -420,6 +421,7 @@ namespace youbot_driver{
 	    break;
 	case Current:
 	    if(NoData != port_cmd_eff.read(m_cmd_eff)){
+		printf("Current Commands received \n");
             if ( m_cmd_eff.efforts.size() == YOUBOT_NR_OF_JOINTS) {
                 for (unsigned int i = 0; i < YOUBOT_NR_OF_JOINTS; i++) {
                     double eff_conversion =
