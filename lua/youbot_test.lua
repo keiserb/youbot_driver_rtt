@@ -42,7 +42,7 @@ yb=depl:getPeer("youbot")
 yb:getProperty("ifname"):set(ETHERCAT_IF)
 
 -- the youbot activity is running at 500Hz
-depl:setActivity("youbot", 0.002, 50, rtt.globals.ORO_SCHED_RT)
+depl:setActivity("youbot", 0.01, 50, rtt.globals.ORO_SCHED_RT)
 
 -- Load the Lua service into the youbot. This essentially makes the
 -- youbot component Lua scriptable. Used here to run the calibration
