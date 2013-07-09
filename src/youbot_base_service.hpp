@@ -66,22 +66,16 @@ namespace youbot_driver {
 	//Ports
 	InputPort<geometry_msgs::Twist> port_cmd_twist;
 	InputPort<std::vector<int> > port_cmd_current;
-	InputPort<std_msgs::Int32MultiArray> port_cmd_current_ros;		//add ROS functionality to cmd_current
-	InputPort<std_msgs::String> port_control_mode_ros;		//add ROS functionality to String msgs
 	OutputPort<nav_msgs::Odometry> port_odom;
 	OutputPort<youbot_msgs::motor_states> port_motor_states;
 	OutputPort<std::string> port_control_mode;
 	OutputPort<std::string> events;
-	OutputPort<std_msgs::String> events_ros;				//add ROS functionality to String msgs
 
 	// Slaves corresponding with the wheels
 	ec_slavet m_wheels[YOUBOT_NR_OF_WHEELS];
 	int slave_nrs[YOUBOT_NR_OF_WHEELS];
 	in_motor_t*  m_in_motor[YOUBOT_NR_OF_WHEELS];
 	std::string m_events; // presized string for composing events.
-	std_msgs::String ros_string;
-	std_msgs::Int32MultiArray ros_array;
-
 	ControlMode m_control_mode;
 	unsigned int module_init_status; // status of module initialization
 
