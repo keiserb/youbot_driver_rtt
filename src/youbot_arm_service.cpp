@@ -151,11 +151,8 @@ namespace youbot_driver{
         this->addPort("joint_effort_command",port_cmd_eff).doc("Commanded joint efforts");
         this->addPort("control_mode", port_control_mode).doc("Currently active control_mode");
         this->addPort("events",port_events).doc("Events");
-        this->addPort("control_mode_ros", port_control_mode_ros).doc("Currently active control_mode ROS");
-        this->addPort("events_ros",port_events_ros).doc("Events ROS");
 
         this->addPort("gripper_cmd", gripper_cmd).doc("gripper command port (1=open, 0=close)");
-        this->addPort("gripper_cmd_ros", gripper_cmd_ros).doc("gripper command port ROS (1=open, 0=close)");
 
         this->addOperation("start",&YoubotArmService::start,this);
         this->addOperation("update",&YoubotArmService::update,this);
@@ -254,8 +251,6 @@ namespace youbot_driver{
                  ( jntpos < (YOUBOT_ARM_LOWER_LIMIT[i] * YOUBOT_ARM_SOFT_LIMIT * (M_PI/180)) ||
                    jntpos > (YOUBOT_ARM_UPPER_LIMIT[i] * YOUBOT_ARM_SOFT_LIMIT * (M_PI/180)))) {
                 port_events.write(make_event(m_events, "e_JNT_SOFT_LIMIT_EXEEDED,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
                 m_soft_limit_ex[i] = true;
             }
             // first time out of limit
@@ -263,8 +258,6 @@ namespace youbot_driver{
                  !( jntpos < (YOUBOT_ARM_LOWER_LIMIT[i] * YOUBOT_ARM_SOFT_LIMIT * (M_PI/180)) ||
                     jntpos > (YOUBOT_ARM_UPPER_LIMIT[i] * YOUBOT_ARM_SOFT_LIMIT * (M_PI/180)))) {
                 port_events.write(make_event(m_events, "e_JNT_SOFT_LIMIT_EXEEDED_EXIT,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
                 m_soft_limit_ex[i] = false;
             }
         }
@@ -344,8 +337,8 @@ namespace youbot_driver{
 	OperationCaller<bool(uint8,uint8,uint8,uint8,int32&)>
             sendMBXGripper(this->getParent()->getOperation("sendMBXGripper"), this->getOwner()->engine());
 
-        if (gripper_cmd.read(gripper_val) == NewData || gripper_cmd_ros.read(gripper_ros) == NewData) {
-            if(gripper_val || gripper_ros.data) { // open
+        if (gripper_cmd.read(gripper_val) == NewData) {
+            if(gripper_val) { // open
                 sendMBXGripper(MVP, 1, 11, 0, enc_width_neg);
 		if(youbot_model != YOUBOT_MODEL_MALAGA)
 		    sendMBXGripper(MVP, 1, 11, 1, enc_width_neg);
@@ -360,10 +353,6 @@ namespace youbot_driver{
 
     void YoubotArmService::process_data_handle() 
     {
-	if(port_control_mode_ros.read(ros_string)==NewData)			//receive data via ROS
-	{
-		m_control_mode = str2control_mode(ros_string.data);
-	}
 	// tbd: do this only once during start 
 	for(unsigned int i=0; i < YOUBOT_NR_OF_JOINTS;i++)
             m_in_motor[i] = (in_motor_t*) m_joints[i].inputs;
@@ -468,49 +457,35 @@ namespace youbot_driver{
             if (m_in_motor[i]->error_flags & OVERCURRENT) {
 		m_motor_states.motor[i].counters.overcurrent++;
                 port_events.write(make_event(m_events, "e_OVERCURRENT,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
                 fatal=true;
             }
             if (m_in_motor[i]->error_flags & UNDERVOLTAGE) {
 		m_motor_states.motor[i].counters.undervoltage++;
                 port_events.write(make_event(m_events, "e_UNDERVOLTAGE,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
                 m_control_modes[i]=MotorStop;
                 fatal=true;
             }
             if (m_in_motor[i]->error_flags & OVERTEMP) {
 		m_motor_states.motor[i].counters.overtemp++;
                 port_events.write(make_event(m_events, "e_OVERTEMP,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
                 m_control_modes[i]=MotorStop;
                 fatal=true;
             }
             if (m_in_motor[i]->error_flags & HALL_ERR) {
 		m_motor_states.motor[i].counters.hall_err++;
                 port_events.write(make_event(m_events, "e_HALL_ERR,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
             }
             if (m_in_motor[i]->error_flags & ENCODER_ERR) {
 		m_motor_states.motor[i].counters.encoder_err++;
                 port_events.write(make_event(m_events, "e_ENCODER_ERR,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
             }
             if (m_in_motor[i]->error_flags & SINE_COMM_INIT_ERR) {
 		m_motor_states.motor[i].counters.sine_comm_init_err++;
                 port_events.write(make_event(m_events, "e_SINE_COMM_INIT_ERR,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
             }
             if (m_in_motor[i]->error_flags & EMERGENCY_STOP) {
 		m_motor_states.motor[i].counters.emergency_stop++;
                 port_events.write(make_event(m_events, "e_EMERGENCY_STOP,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
             }
 	    
 	    if (m_in_motor[i]->error_flags & MODULE_INIT) {
@@ -524,8 +499,6 @@ namespace youbot_driver{
             if (m_in_motor[i]->error_flags & EC_TIMEOUT) {
 		m_motor_states.motor[i].counters.ec_timeout++;
                 port_events.write(make_event(m_events, "e_EC_TIMEOUT,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
                 if(!sendMBX(false,SAP,CLR_EC_TIMEOUT,slave_nrs[i],dummy)) {
                     log(Warning) << "arm: failed to clear EC_TIMEOUT flag" << endlog();
                     fatal = true;
@@ -536,8 +509,6 @@ namespace youbot_driver{
             if (m_in_motor[i]->error_flags & I2T_EXCEEDED && !m_i2t_ex[i]) {
 		m_motor_states.motor[i].counters.i2t_exceeded++;
                 port_events.write(make_event(m_events, "e_I2T_EXCEEDED,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
                 m_control_mode=MotorStop;
                 fatal=true;
                 m_i2t_ex[i]=true;
@@ -551,8 +522,6 @@ namespace youbot_driver{
             } else if (!(m_in_motor[i]->error_flags & I2T_EXCEEDED) && m_i2t_ex[i]) {
                 // i2c exceeded falling edge
                 port_events.write(make_event(m_events, "e_I2T_EXCEEDED_EXIT,jointid:", i));
-                ros_string.data=m_events;           //write output to ROS Topic as well
-                port_events_ros.write(ros_string);
                 m_i2t_ex[i]=false;
 		log(Warning) << "arm: i2t execeeded reset on wheel " << i << endlog();
             }

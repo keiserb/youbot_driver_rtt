@@ -58,7 +58,7 @@ end
 -- The youbot component is partitioned into one base service and one
 -- or more Arm services (depending on the amount of arms added). The
 -- following gets handles to these services.
--- arm=yb:provides("Arm1")
+arm=yb:provides("Arm1")
 base=yb:provides("Base")
 
 --- connect to base desired velocity
@@ -66,7 +66,7 @@ base=yb:provides("Base")
 base_cmd_vel = rttlib.port_clone_conn(base:getPort("cmd_twist"))
 base_cmd_curr = rttlib.port_clone_conn(base:getPort("cmd_current"))
 
---[[
+
 -- connect to arm desired velocity
 arm_cmd_vel = rttlib.port_clone_conn(arm:getPort("joint_velocity_command"))
 arm_vel=rtt.Variable("/motion_control_msgs/JointVelocities")
@@ -85,10 +85,11 @@ end
 
 
 --- Some helper functions
+function aset_cmode_pos() arm:setControlMode(1) end
 function aset_cmode_vel() arm:setControlMode(2) end
 function aset_cmode_cur() arm:setControlMode(rtt.Variable("uint8", 6)) end
 function astop() arm:setControlMode(rtt.Variable("uint8", 0)) end
-]]--
+
 
 function bset_cmode_vel() base:setControlMode(2) end
 function bset_cmode_curr() base:setControlMode(6) end
@@ -119,20 +120,20 @@ depl:stream("youbot.driver_state", rtt.provides("ros"):topic("driver_state"))
 -- wait until arm and base are configured
 timeout = 5 -- seconds
 while true do
---   local arm_calib = arm:configured()
+   local arm_calib = arm:configured()
    local base_calib = base:configured()
---   if arm_calib and base_calib then break end
+   if arm_calib and base_calib then break end
 	if base_calib then break end
 
    if timeout <= 0 then
---      if not arm_calib then print("Arm calibration failed.") end
+      if not arm_calib then print("Arm calibration failed.") end
       if not base_calib then print("Base calibration failed.") end
       break
    end
    io.stderr:write('.')
    rtt.sleep(1,0); timeout=timeout - 1
 end
---[[
+
 
 -- Launch calibration FSM.
 -- This state machine is run in a service executing in the context of
@@ -154,7 +155,7 @@ end
 
 --- Print arm status information.
 function ainf() rttlib.portstats(arm) end
-]]--
+
 --- Print base status information
 function binf() rttlib.portstats(base) end
 
@@ -165,8 +166,8 @@ function dinf() rttlib.portstats(yb) end
 -- @param axis axis number (0-5)
 -- @param dur duration to move in seconds.
 -- @param vel desired velocity in rad/s
--- function amove(axis, dur, vel)
---[[
+function amove(axis, dur, vel)
+
    local function set_vel(axis, vel)
       if axis<=5 or axis > 0 then arm_vel.velocities[axis]=vel
       else error("unknown axis nr ".. tostring(axis)) end
@@ -206,7 +207,7 @@ function aforce(axis, torque)
    end
    arm_cmd_torque:write(arm_torque)
 end
-]]--
+
 --- Move base in velocity mode.
 -- @param dir direction ('th', 'x', 'y')
 -- @param dur duration to move in seconds
@@ -259,14 +260,14 @@ end
 
 --- shake ya legs to see if healthy
 function test()
---   local avel=0.03
+   local avel=0.03
    local bvel=0.1
---   aset_cmode_vel()
+   aset_cmode_vel()
    bset_cmode_vel()
    bmove('th', 2, bvel)
    bmove('th', 2, -bvel)
---   amove({0,1,2,3,4}, 2, {avel, avel, avel, avel, avel})
---   amove({0,1,2,3,4}, 2, {-avel, -avel, -avel, -avel, -avel})
+   amove({0,1,2,3,4}, 2, {avel, avel, avel, avel, avel})
+   amove({0,1,2,3,4}, 2, {-avel, -avel, -avel, -avel, -avel})
 end
 
 
@@ -282,6 +283,7 @@ function youbot_test_help()
       amove(axis, t, vel)	move axis [0..5] for t seconds with velocity vel.
       bmove(dir, t, vel)	move base in dir ('th', 'x', 'y') with for t seconds with vel [m/s]
       bcurr(cur_tab, dur)       move base for dur sec in current mode. curr_tab={cur1, cur2, cur3, cur4}
+      aset_cmode_pos()		set arm ControlMode to Position
       aset_cmode_vel()	 	set arm ControlMode to velocity
       aset_cmode_cur()		set arm ControlMode to current
       astop		     	stop arm motors.
