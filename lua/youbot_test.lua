@@ -97,25 +97,6 @@ function bstop() base:setControlMode(0) end
 
 if not yb:start() then errmsg("Failed to start youbot") end
 
---[[
---publish other output ports on ROS Nodes
-depl:stream("youbot.Arm1.motor_states", rtt.provides("ros"):topic("arm_motor_states"))
-depl:stream("youbot.Arm1.jointstate", rtt.provides("ros"):topic("joint_states"))
-depl:stream("youbot.Arm1.joint_position_command", rtt.provides("ros"):topic("/arm_1/arm_controller/position_command"))
-depl:stream("youbot.Arm1.joint_velocity_command", rtt.provides("ros"):topic("/arm_1/arm_controller/velocity_command"))
-depl:stream("youbot.Arm1.joint_effort_command", rtt.provides("ros"):topic("/arm_1/arm_controller/torques_command"))
-depl:stream("youbot.Arm1.gripper_cmd_ros", rtt.provides("ros"):topic("/arm_1/gripper_controller/position_command"))
-depl:stream("youbot.Arm1.control_mode_ros", rtt.provides("ros"):topic("arm_control_mode"))
-depl:stream("youbot.Arm1.events_ros", rtt.provides("ros"):topic("arm_events"))
-depl:stream("youbot.Base.motor_states", rtt.provides("ros"):topic("base_motor_states"))
-depl:stream("youbot.Base.odometry", rtt.provides("ros"):topic("odom"))
-depl:stream("youbot.Base.control_mode_ros", rtt.provides("ros"):topic("base_control_mode"))
-depl:stream("youbot.Base.events_ros", rtt.provides("ros"):topic("base_events"))
-depl:stream("youbot.Base.cmd_twist", rtt.provides("ros"):topic("cmd_vel"))
-depl:stream("youbot.Base.cmd_current_ros", rtt.provides("ros"):topic("base_cmd_current"))
-depl:stream("youbot.driver_state", rtt.provides("ros"):topic("driver_state"))
-]]--
-
 
 -- wait until arm and base are configured
 timeout = 5 -- seconds
