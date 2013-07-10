@@ -410,7 +410,6 @@ namespace youbot_driver{
 	    break;
 	case Current:
 	    if(NoData != port_cmd_eff.read(m_cmd_eff)){
-		printf("Current Commands received \n");
             if ( m_cmd_eff.efforts.size() == YOUBOT_NR_OF_JOINTS) {
                 for (unsigned int i = 0; i < YOUBOT_NR_OF_JOINTS; i++) {
                     double eff_conversion =
