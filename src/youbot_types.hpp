@@ -81,7 +81,7 @@ static const unsigned int max_event_strlen = 100; // maxium length of events
 #define PWM_VALUE_MAX 1799
     //@}
 
-#define GRIPPER_ENC_WIDTH 67000 // encoder width of gripper
+#define GRIPPER_ENC_WIDTH 66000 // encoder width of gripper
 
 #define YOUBOT_MODEL_MALAGA 0
 #define YOUBOT_MODEL_FUERTE 1
